@@ -16,8 +16,30 @@ user_list.append(jason)
 howard = {"name" : "howard", "home" : "Chicago"} # 맵
 user_list.append(howard)
 
-print("======= 주소록 =======")
-for user in user_list :
-    print("이름 : ", user["name"])
-    print("주소 : ", user["home"])
-    print("======================")
+menu = 0
+
+while True :
+    menu = input("1. 조회   2. 등록   3. 종료 : ")
+
+    if menu == "1" :
+        print("======= 주소록 =======")
+        for user in user_list :
+            print("이름 : ", user["name"])
+            print("주소 : ", user["home"])
+            print("======================")
+            
+    elif menu == "2" :
+        name = input("name : ")
+        home = input("home : ")
+
+        user = {"name" : name, "home" : home}
+        user_list.append(user)
+        
+        print("등록 완료.")
+
+    elif menu == "3":
+        print('주소록 종료')
+        break
+    
+    else:
+        print('그거는 없는 명령어')
