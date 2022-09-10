@@ -9,3 +9,7 @@
 f1 = open('text3.txt', 'w', encoding='utf-8')
 f1.write('1. 홈런볼\n2. 맛동산\n3. 에이스\n4. 오감자\n5. 꼬깔콘\n')
 f1.close()
+
+# 저장한 파일 읽어오기
+f1 = open('text3.txt', 'r', encoding='utf-8')
+f1.readlines()
